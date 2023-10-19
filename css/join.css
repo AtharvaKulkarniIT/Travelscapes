@@ -1,0 +1,142 @@
+body{
+	font-family: 'Montserrat',sans-serif;
+	overflow-x: hidden;
+	font-size: 14px;
+}
+.bg{
+	background-image: url("images/munnar.jpg");
+	background-size: cover;
+}
+.joinForm{
+	width: 90%;
+	background-color: #ffffff;
+	left:5%;
+	padding: 2%;
+}
+.linkBtn{
+	border: none;
+	background-color: unset;
+	color: #ffc312;
+	text-decoration: none;
+	font-family: 'Montserrat',sans-serif;
+}
+.linkBtn:hover{
+	text-decoration: none;
+	cursor: pointer;
+	color: #ffc312;
+}
+.heading{
+	font-family: 'Montserrat',sans-serif;
+	font-weight: bold;
+	margin: 0;
+}
+.confirmBtn{
+	position: absolute;
+	right: -18%;
+	height: 100%;
+}
+.topButtons{
+	width:100%; 
+	padding-bottom: 1%;
+}
+.price{
+	position: absolute;
+	text-align: center;
+	margin: auto;
+}
+.totalCost{
+	font-size: 18px;
+	color: #e84393;
+	clear: both;
+	font-weight: 500;
+	width: 100%;
+	margin-bottom: 0%;
+}
+.tnc{
+	font-size: 12px;
+	color: #898989;
+	clear: both;
+	width: 100%;
+}
+.yellowBtn{
+	width: 90%;
+	margin: auto;
+	height: 5%;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: #e84393;
+	color: white;
+	font-family: 'Montserrat',sans-serif;
+	font-size: 16px;
+	border:none;
+}
+.yellowBtn:hover{
+	cursor: pointer;
+}
+#iniPCount{
+	width: 7%;
+	margin: unset;
+	color: #ffffff;
+}
+#addbtn{
+	color: #e84393;
+	z-index:2;
+	position: absolute;
+	right: 5%;
+	font-weight: 500;
+}
+.form-group{
+	position: relative;
+}
+.selectloc{
+	width: 30%;
+}
+.bottomBtn{
+	z-index: 1;
+	margin-bottom: 2%;
+	right: 0%;
+}
+.delBtn
+{
+	border: none;
+	background-color: white;
+	color: #ff3f34;
+	padding: 0 0;
+	margin:0; 
+	margin-left: 10%;
+}
+.bottomBtn{
+	padding: 0%;
+	width: 268px;
+	margin: 0%; 
+	height: 120%;
+	position: absolute;
+	right: 0%;
+}
+.bottomBtn:hover{
+	background-color: #e84393;
+}
+.secondaryBtn{
+	width: 400%;
+	margin: 0;
+	height: 120%;
+	border-radius: 5px;
+	padding: 5%;
+	background-color: #ffffff;
+	color: #2c3e50;
+	border: 1px solid #2c3e50;
+	font-family: 'Montserrat',sans-serif;
+	font-size: 16px;
+}
+.secondaryBtn:hover{
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+	.bg{
+		background-image: url("images/bg.jpg");
+		background-size: cover;
+		width: 50%;
+	}
+}
+
