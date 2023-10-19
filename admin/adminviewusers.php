@@ -15,7 +15,7 @@ $db = null;
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="adminviewusers.css">
+<link rel="stylesheet" href="./css/adminviewusers.css">
 </head>
 <body>
 
