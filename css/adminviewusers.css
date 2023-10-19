@@ -1,0 +1,51 @@
+/* adminviewusers.css */
+
+body {
+    background-color: #FFECF0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    background-color: #e84393;
+    color: #FFF;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #FFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #e84393;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #e84393;
+    color: #FFF;
+}
+
+tr:nth-child(even) {
+    background-color: #FFECF0;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFECF0;
+}
+
+tr:hover {
+    background-color: #FF69B4;
+    color: #FFF;
+}
