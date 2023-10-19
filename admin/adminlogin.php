@@ -11,7 +11,7 @@ $conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
 <head>
 <title>Admin Login</title>
 <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-<link rel="stylesheet" type="text/css" href="adminlogin.css">
+<link rel="stylesheet" type="text/css" href="./css/adminlogin.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
 <body>
