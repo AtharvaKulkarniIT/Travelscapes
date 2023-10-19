@@ -20,7 +20,7 @@ $result = $conn->query($sql);
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="adminusers.css">
+    <link rel="stylesheet" type="text/css" href="./css/adminusers.css">
     <title>Admin Login Data</title>
 </head>
 <body>
