@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="admindashboard.css">
+    <link rel="stylesheet" type="text/css" href="./css/admindashboard.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Admin Panel</title>
 </head>
@@ -40,7 +40,7 @@ session_start();
             </ul>
             <div class="sidebar-footer" style="color: #333;">
                 <p style="color:cornsilk;">Logged in as Admin</p>
-                <a href="#" style="color: cornsilk;"><i class="fa fa-sign-out"></i> Logout</a>
+                <a href="adminlogout.php" style="color: cornsilk;"><i class="fa fa-sign-out"></i> Logout</a>
             </div>
         </div>
 
