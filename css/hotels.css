@@ -1,0 +1,180 @@
+/* Global Styles */
+body {
+    background-color: #fff; /* White background */
+    color: #e84393; /* Pink text color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #e84393; /* Pink color for headings */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Filter Form Styles */
+.filter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.filter-select {
+    margin: 10px;
+}
+
+/* Hotel Table Styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #e84393; /* Pink border */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #e84393; /* Pink background for table headers */
+    color: #fff; /* White text color for table headers */
+}
+
+/* Amenities Column Styles */
+.amenities-column {
+    width: 30%; /* Reduce the width of the amenities column */
+    transition: width 0.3s; /* Add a smooth transition effect */
+}
+
+.amenities-column:hover {
+    width: 30%; /* Reduce width on hover */
+}
+
+.amenities-list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.amenities-column:hover .amenities-list {
+    display: block;
+    width: min-content;
+}
+
+.amenity-item {
+    font-weight: bold;
+}
+
+/* "Book Now" Button Styles */
+.book-button {
+    background-color: #e84393; /* Pink background for the button */
+    color: #fff; /* White text color */
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.book-button:hover {
+    background-color: #ff6384; /* Lighter pink on hover */
+}
+
+.filter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.filter-select {
+    margin: 10px;
+}
+
+.amenities-column {
+    width: 30%; /* Reduce the width of the amenities column */
+    transition: width 0.3s; /* Add a smooth transition effect */
+}
+
+.amenities-column:hover {
+    width: 30%; /* Reduce width on hover */
+}
+
+.amenities-list {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.amenities-column:hover .amenities-list {
+    display: block;
+    width: min-content;
+}
+
+.amenity-item {
+    font-weight: bold;
+}
+
+/* Style for the "Book now" button */
+.book-button {
+    background-color: blue;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 15px 0; /* Increase vertical padding to increase the height */
+}
+
+/* Logo Styles */
+.logo {
+    float: left;
+    padding: 10px 20px;
+    font-size: 24px;
+    color: #e84393;
+}
+
+/* Footer Styles */
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    text-align: center;
+    padding: 15px 0; /* Increase footer height */
+    font-size: 16px;
+    width: 100%; /* Full-width footer */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow at the top of the footer */
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover transition */
+}
+
+footer:hover {
+    color: #e84393; /* Pink text color on hover */
+}
+
+/* Content Container Styles */
+.content-container {
+    background-color: #f2f2f2;
+    border: 1px solid #e84393;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto; /* Center the container */
+    padding: 20px;
+    width: 60%; /* Adjust the width as needed */
+}
