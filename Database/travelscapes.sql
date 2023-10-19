@@ -39,7 +39,9 @@ CREATE TABLE `admin_login` (
 
 INSERT INTO `admin_login` (`srno`, `Admin_Name`, `Admin_Password`) VALUES
 (1, 'Admin', 'Admin'),
-(2, 'Tejas', 'Tejas');
+(2, 'Tejas', 'Tejas'),
+(3,  'atharva', 'atharva'),
+(4, 'yash' ,  'Yash');
 
 -- --------------------------------------------------------
 
