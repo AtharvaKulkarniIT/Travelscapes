@@ -55,13 +55,11 @@ if (!empty($selectedDays)) {
     $selectedDays = ["All"]; 
 }
 
-// Execute the SQL query
 $result = $conn->query($sql);
 
 // Create an array to store the data
 $data = [];
 
-// Loop through the results and add them to the array
 while ($row = $result->fetch_assoc()) {
     $data[] = $row;
 }
@@ -73,7 +71,6 @@ $username = "root";
 $password = "";
 $dbname = "travelscapes";
 
-// Create a connection to the database
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
@@ -112,7 +109,7 @@ $conn->close();
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="adminviewjourneys.css">
+    <link rel="stylesheet" href="./css/adminviewjourneys.css">
     <title>Available Journeys</title>
     <script>
         function toggleDropdown(filterName) {
