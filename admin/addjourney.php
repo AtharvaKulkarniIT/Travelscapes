@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 // Initialize variables for journey data
 $city = $region = $season = $days = $cost = "";
 
-// Check if the form has been submitted
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve journey data from the form if available
     $city = isset($_POST["city"]) ? $_POST["city"] : "";
