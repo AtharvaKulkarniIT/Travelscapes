@@ -17,95 +17,43 @@ if ($_SESSION['status'] == 'loggedin') {
     <link rel="stylesheet" type="text/css" href="override.css">
     <link rel="stylesheet" type="text/css" href="join.css">
     <style>
-    .navbar {
-      background-color: #e84393 !important;
-    }
+      .navbar {
+        background-color: #e84393 !important;
+      }
     </style>
     <style>
-        table thead-dark{
-            background-color: #e84393;
-        }
-        </style>
+      table thead-dark {
+        background-color: #e84393;
+      }
+    </style>
   </head>
 
+
+
   <script>
-    var passengers = 1;
-    var cost1 = 0;
-    var cost2 = 0;
-    var cost3 = <?php echo $baseprice; ?>;
+    // This is the original price
+    var originalPrice = <?php echo $baseprice; ?>;
+    var passengers = 1; // Initialize with 1 passenger
+
     document.addEventListener("DOMContentLoaded", function() {
       // Update total cost when the DOM is ready
       updateTotalCost();
 
-      // Add event listeners
+      // Add an event listener to the input field for the number of passengers
       document.getElementById('Pcount').addEventListener("input", updateTotalCost);
-      document.getElementById('3star').addEventListener("change", updateTotalCost);
-      document.getElementById('5star').addEventListener("change", updateTotalCost);
-      document.getElementById('veg').addEventListener("change", updateTotalCost);
-      document.getElementById('nonveg').addEventListener("change", updateTotalCost);
     });
 
     function updateTotalCost() {
-  var passengers = 1;
-  var cost1 = 0;
-  var cost2 = 0;
-  var cost3 = <?php echo $baseprice; ?>;
+      // Get the number of passengers from the input field
+      passengers = parseInt(document.getElementById("Pcount").value, 10);
 
-  function updateTotalCost() {
-    passengers = parseInt(document.getElementById("Pcount").value, 10);
-    var acc_pref = "3star";
-    var meal_pref = "veg";
+      // Calculate the total cost by multiplying the original price with the number of passengers
+      var totalCost = originalPrice * passengers;
 
-    if (document.getElementById("3star").checked) {
-      acc_pref = document.getElementById("3star").value;
-    } else if (document.getElementById("5star").checked) {
-      acc_pref = document.getElementById("5star").value;
-      cost1 += 5000;
-    }
-
-    if (document.getElementById("veg").checked) {
-      meal_pref = document.getElementById("veg").value;
-    } else if (document.getElementById("nonveg").checked) {
-      meal_pref = document.getElementById("nonveg").value;
-      cost2 += 500;
-    }
-
-    var selected_locn = document.getElementById("Locations").value;
-    switch (selected_locn) {
-      case "ladakh":
-        cost3 = 13000;
-        break;
-      case "manali":
-        cost3 = 12500;
-        break;
-      case "chennai":
-        cost3 = 15000;
-        break;
-      case "sikkim":
-        cost3 = 20000;
-        break;
-      case "rajasthan":
-        cost3 = 22000;
-        break;
-      case "bhopal":
-        cost3 = 12000;
-        break;
-      case "pune":
-        cost3 = 8000;
-        break;
-    
-
-    var totalCost = (cost1 + cost2 + cost3) * passengers;
-    document.getElementById("total").innerHTML = "Total cost ₹" + totalCost + "*";
-    document.getElementById("costforpayment").value = totalCost;
-  }
-
-  // Rest of your HTML and JavaScript code
-
-
+      // Display the total cost in the HTML element with the id "total"
+      document.getElementById("total").innerHTML = "Total cost: ₹" + totalCost;
     }
   </script>
-
 
   <body class="bg">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -144,116 +92,148 @@ if ($_SESSION['status'] == 'loggedin') {
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <!--             <a class="dropdown-item" href="#">Edit Profile</a> -->
-            <a class="dropdown-item" href="logout.php">Logout</a>
           </div>
           </li>
         </ul>
       </div>
     </nav>
-    <!--main form-->
-    
+
     <form action="upload.html" method="POST">
       <div class="joinForm">
         <div class="topButtons">
           <label class="form-check-label" for="Pcount">Number of Passengers</label>
-          <input type="number" name="passengerCount" min="1" id="Pcount" value="1">
-        </div>
-        <table class="table" id="passengertable">
-        
-          <thead style="background-color: #e84393;">
-            <tr>
-              <th scope="col">First Name</th>
-              <th scope="col">Last Name</th>
-              <th scope="col">Age</th>
-              <th scope="col">Gender</th>
-              <th scope="col">Contact</th>
-            </tr>
-          </thead>
-          <tbody>
-
-
-            <td><input type="text" name="fname0" required></td>
-            <td><input type="text" name="lname0" required></td>
-            <td><input name="age0" type="number" min="1" required></td>
-            <td>
-              <select name="gender0" required>
-                <option value="">Select</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
-            </td>
-
-            <td><input type="text" name="contact0" maxlength="10" pattern="([0-9]{10})"></td>
-          </tbody>
-        </table>
-        <div class="form-group row">
-          <label class="col-xl-3 col-form-label">From : Mumbai</label>
-          <label for="Locations" class="col-xl-1 col-form-label">To :</label>
-          <div class="col-xl-6">
-            <select name="from_loc" class="form-control selectloc" id="Locations" width="9" onchange="javascript:getdata()">
-              <option selected="" disabled>Select Location</option>
-              <option value="ladakh">Ladakh</option>
-              <option value="manali">Manali</option>
-              <option value="chennai">Chennai</option>
-              <option value="sikkim">Sikkim</option>
-              <option value="rajasthan">Rajasthan</option>
-              <option value="bhopal">Bhopal</option>
-              <option value="pune">Pune</option>
-            </select>
-          </div>
-        </div>
-
-
-        <div class="form-group row ">
-          <label for="travelpref" class="col-xl-3 col-form-label">Travel time preference</label>
-          <div id="travelpref" class="col-xl-9">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="travelpref" id="day" value="day">
-              <label class="form-check-label" for="day">Day</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="travelpref" id="night" value="night">
-              <label class="form-check-label" for="night">Night</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="travelpref" id="any" value="any">
-              <label class="form-check-label" for="any">Any</label>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row price">
-          <div class="totalCost" style="padding: 0%; margin: 0;">
-            <div class="cost-wrapper">
-              <p class="centre-text">Total Cost:
-              <p id="total">15000*</p> 
-              </p>
-            </div>
-          </div>
-          <div class="tnc" style="display: block;">
-            <p id="tncText" style="padding: 0%; margin: 0; margin-bottom: 1%;">*The above price is inclusive of travelling, accomodation, taxes and trip cost.</p>
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <div class="col-xl-10" id="tncCheck">
-            <input class="" type="checkbox" name="tncCheck" value="agreed" required>
-            <label>I have read the <a href="example.html">terms and conditions</a> and accept them</label>
-          </div>
-        </div>
-        <div class="form-group row col-md-12" class="foot">
-          <div class="form-check form-check-inline col-md-5">
-            <a href="home.php?status=loggedin"><button onclick="" class="secondaryBtn">Cancel</button></a>
-          </div>
-          <form action="target.html" method="post">
-            <div class="form-check form-check-inline col-md-5 confirmBtn">
-              <input type="hidden" name="cost" id="costforpayment">
-              <input type="hidden" name="tripKaID" id="tripIdForMail" value="<?php echo $tripid; ?>">
-              <input type="hidden" name="email" id="UseremailForMail" value="<?php echo $email; ?>">
-              <input class="form-check-input yellowBtn bottomBtn" type="submit" name="JoinTrip" value="Proceed">
-            </div>
-        </div>
+          <input type="number" name="passengerCount" min="1" id="Pcount" value="1" required>
+          <button type="button" onclick="calculatePrice()">Go!</button>
     </form>
+    <p id="result"></p>
     </div>
+    <script>
+      function calculatePrice() {
+        const passengerCount = parseInt(document.getElementById("Pcount").value);
+        const ticketPrice = passengerCount * 15000;
+        document.getElementById("total").textContent = ticketPrice; // Replace "15000*" content
+      }
+    </script>
+    <table class="table" id="passengertable">
+
+      <thead style="background-color: #e84393;">
+        <tr>
+          <th scope="col">First Name</th>
+          <th scope="col">Last Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+        <td><input type="text" name="fname0" required></td>
+        <td><input type="text" name="lname0" required></td>
+        <td><input name="age0" type="number" min="1" required></td>
+        <td>
+          <select name="gender0" required>
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </td>
+
+        <td><input type="text" name="contact0" maxlength="10" pattern="([0-9]{10})"></td>
+      </tbody>
+    </table>
+    <div class="form-group row">
+      <label class="col-xl-3 col-form-label">From : Mumbai</label>
+      <label for="Locations" class="col-xl-1 col-form-label">To :</label>
+      <div class="col-xl-6">
+        <select name="from_loc" class="form-control selectloc" id="Locations" width="9" onchange="javascript:getdata()">
+          <option selected="" disabled>Select Location</option>
+          <option value="ladakh">Ladakh</option>
+          <option value="manali">Manali</option>
+          <option value="chennai">Chennai</option>
+          <option value="sikkim">Sikkim</option>
+          <option value="rajasthan">Rajasthan</option>
+          <option value="bhopal">Bhopal</option>
+          <option value="pune">Pune</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="form-group row ">
+      <label for="travelpref" class="col-xl-3 col-form-label">Travel time preference</label>
+      <div id="travelpref" class="col-xl-9">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="travelpref" id="day" value="day">
+          <label class="form-check-label" for="day">Day</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="travelpref" id="night" value="night">
+          <label class="form-check-label" for="night">Night</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="travelpref" id="any" value="any">
+          <label class="form-check-label" for="any">Any</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row price">
+      <div class="totalCost" style="padding: 0%; margin: 0;">
+        <div class="cost-wrapper">
+          <p class="centre-text">Total Cost:
+          <p id="total">15000*</p>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tnc" style="display: block;">
+      <p id="tncText" style="padding: 0%; margin: 0; margin-bottom: 1%;">*The above price is inclusive of travelling, accomodation, taxes and trip cost.</p>
+    </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-xl-10" id="tncCheck">
+        <input class="" type="checkbox" name="tncCheck" value="agreed" required>
+        <label>I have read the <a href="example.html">terms and conditions</a> and accept them</label>
+      </div>
+    </div>
+    <!--style>
+      .confirmBtn {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+
+      .confirmBtn input[type="submit"] {
+        padding: 5px 10px;
+        /* You can adjust the padding to change the button size */
+      }
+    </style-->
+
+    <!--form action="upload.html" method="post">
+      <div class="form-check form-check-inline col-md-5 confirmBtn">
+        <input type="hidden" name="cost" id="costforpayment">
+        <input type="hidden" name="tripKaID" id="tripIdForMail" value="//
+        <input type="hidden" name="email" id="UseremailForMail" value="//
+        <input class="form-check-input yellowBtn" type="submit" name="JoinTrip" value="Proceed">
+      </div>
+    </form-->
+
+    <style>
+      .proceed-button {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+      }
+    </style>
+
+
+    <a class="btn btn-primary proceed-button" style="background-color: #e84393;" href="upload.html">Proceed</a>
+
+
+
+
 
     <!--Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
