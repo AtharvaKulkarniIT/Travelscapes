@@ -25,6 +25,7 @@
         <a href="#products">Places</a>
         <a href="#review">Review</a>
         <a href="./Login/login.php">Login/Signup</a>
+        <a href="./admin/adminlogin.php">Admin</a>
     </nav>
 
     <div class="icons">
