@@ -42,16 +42,14 @@ cd Travelscapes
 
 4. Create a database with name `Travelscapes` and import it into your MySQL server. You can find the SQL file in the `Database` directory. 
 
-5. Configure the database connection. Open the `config.php` file in the `includes` directory and update the database connection details accordingly.
+5. Start your local server environment.
 
-6. Start your local server environment.
-
-7. Open your web browser and navigate to :
+6. Open your web browser and navigate to :
    ```
    http://localhost/Travelscapes-main
    ```
 
-9. You should now see the Travelscapes website running locally on your machine.
+7. You should now see the Travelscapes website running locally on your machine.
 
 ## Contributors
 
