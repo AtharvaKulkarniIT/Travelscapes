@@ -3,7 +3,7 @@
 [![GitHub Forks](https://img.shields.io/github/forks/AtharvaKulkarniIT/VIT_Student_Accomodation-in-c.svg?style=social&label=Fork&maxAge=2592000)](https://www.github.com/AtharvaKulkarniIT/VIT_Student_Accomodation-in-c/fork)
 <a href="https://github.com/AtharvaKulkarniIT/Travelscapes/stargazers"><img src="https://img.shields.io/github/stars/AtharvaKulkarniIT/Travelscapes" alt="Stars Badge"/></a>
 [![GitHub Issues](https://img.shields.io/github/issues/AtharvaKulkarniIT/Travelscapes.svg?style=flat&label=Issues&maxAge=2592000)](https://www.github.com/AtharvaKulkarniIT/Travelscapes/issues)
-[![contributors 3](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat&label=Contributions&colorA=red&colorB=black	)](#)
+[![contributors 3](https://img.shields.io/badge/contributors-3-brightgreen.svg?style=flat&label=Contributors&colorA=red&colorB=black	)](#)
 
 Welcome to Travelscapes, a responsive travel website designed to provide you with seamless travel planning, booking, and exploration experiences. Whether you're a seasoned traveler or someone looking for their next adventure, Travelscapes has something for everyone.
 
