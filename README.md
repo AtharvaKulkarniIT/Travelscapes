@@ -41,7 +41,7 @@ cd Travelscapes-main
 
 3. Set up your local server environment.Make sure you save this project in the htdocs folder. If you don't have one installed, you can use tools like XAMPP or WAMP for PHP and MySQL.
 
-4. Create a database with name `Travelscapes` and import it into your MySQL server. You can find the SQL file in the `Database` directory. 
+4. Create a database with name `travelscapes` and import it into your MySQL server. You can find the SQL file in the `Database` directory. 
 
 5. Start your local server environment.
 
