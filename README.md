@@ -36,7 +36,7 @@ git clone https://github.com/AtharvaKulkarniIT/Travelscapes.git
 2. Navigate to the directory:
 
 ```bash
-cd Travelscapes
+cd Travelscapes-main
 ```
 
 3. Set up your local server environment.Make sure you save this project in the htdocs folder. If you don't have one installed, you can use tools like XAMPP or WAMP for PHP and MySQL.
