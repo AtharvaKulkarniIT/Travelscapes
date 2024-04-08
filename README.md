@@ -1,6 +1,6 @@
 # Travelscapes
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](#)
-[![GitHub Forks](https://img.shields.io/github/forks/AtharvaKulkarniIT/VIT_Student_Accomodation-in-c.svg?style=social&label=Fork&maxAge=2592000)](https://www.github.com/AtharvaKulkarniIT/VIT_Student_Accomodation-in-c/fork)
+[![GitHub Forks](https://img.shields.io/github/forks/AtharvaKulkarniIT/Travelscapes.svg?style=social&label=Fork&maxAge=2592000)](https://www.github.com/AtharvaKulkarniIT/Travelscapes/fork)
 <a href="https://github.com/AtharvaKulkarniIT/Travelscapes/stargazers"><img src="https://img.shields.io/github/stars/AtharvaKulkarniIT/Travelscapes" alt="Stars Badge"/></a>
 [![GitHub Issues](https://img.shields.io/github/issues/AtharvaKulkarniIT/Travelscapes.svg?style=flat&label=Issues&maxAge=2592000)](https://www.github.com/AtharvaKulkarniIT/Travelscapes/issues)
 [![contributors 3](https://img.shields.io/badge/contributors-3-brightgreen.svg?style=flat&label=Contributors&colorA=red&colorB=black	)](#)
