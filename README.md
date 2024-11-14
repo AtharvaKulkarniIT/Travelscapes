@@ -5,7 +5,7 @@
 [![GitHub Issues](https://img.shields.io/github/issues/AtharvaKulkarniIT/Travelscapes.svg?style=flat&label=Issues&maxAge=2592000)](https://www.github.com/AtharvaKulkarniIT/Travelscapes/issues)
 [![contributors 3](https://img.shields.io/badge/contributors-3-brightgreen.svg?style=flat&label=Contributors&colorA=red&colorB=black	)](#)
 
-Welcome to Travelscapes, a responsive travel website designed to provide you with seamless travel planning, booking, and exploration experiences. Whether you're a seasoned traveler or someone looking for their next adventure, Travelscapes has something for everyone.
+Welcome to Travelscapes, a responsive travel website designed to provide you with seamless travel planning, booking and exploration experiences. Whether you're a seasoned traveler or someone looking for their next adventure, Travelscapes has something for everyone.
 
 ## Features
 
